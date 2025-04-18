@@ -30,7 +30,7 @@ public class DataTypes {
         System.out.println("Byte value is (Binary): " + Integer.toBinaryString(byte_var & 0xFF));   // Masking to get the last 8 bits and as a positive value
 
         // quiz: calculate a x b / a - b for a = 10, b = 5
-        a = 10;
+//        a = 10;
         b = 5;
         System.out.println("Quiz answer: " + ((a * b) / (a - b)) );
     }
