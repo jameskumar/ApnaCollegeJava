@@ -12,14 +12,14 @@ public class Patterns {
         // Video - 1
         // First Pattern
         /*
-        * Print the below patterns:
-        * *****
-        * *****
-        * *****
-        * *****
-        * */
+         * Print the below patterns:
+         * *****
+         * *****
+         * *****
+         * *****
+         * */
 
-        for (int row = 1; row <=4; row++) {
+        for (int row = 1; row <= 4; row++) {
             for (int column = 1; column <= 5; column++) {
                 System.out.print("*");
             }
@@ -30,18 +30,17 @@ public class Patterns {
 
         // Second Pattern
         /*
-        * *****
-        * *   *
-        * *   *
-        * *****
-        * */
+         * *****
+         * *   *
+         * *   *
+         * *****
+         * */
 
         for (int row = 1; row <= 4; row++) {
             for (int column = 1; column <= 5; column++) {
                 if ((row == 1 || row == 4) || (column == 1 || column == 5)) {
                     System.out.print("*");
-                }
-                else {
+                } else {
                     System.out.print(" ");
                 }
             }
@@ -52,15 +51,15 @@ public class Patterns {
 
         // Third Pattern
         /*
-        * Half pyramid pattern
-        * *
-        * **
-        * ***
-        * ****
-        * */
+         * Half pyramid pattern
+         * *
+         * **
+         * ***
+         * ****
+         * */
 
         for (int row = 1; row <= 4; row++) {
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -78,7 +77,7 @@ public class Patterns {
          * */
 
         for (int row = 4; row >= 1; row--) {
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -96,11 +95,10 @@ public class Patterns {
          * */
 
         for (int row = 1; row <= 4; row++) {
-            for (int column = 4;  column >= 1; column--) {
-                if(column <= row) {
+            for (int column = 4; column >= 1; column--) {
+                if (column <= row) {
                     System.out.print("*");
-                }
-                else {
+                } else {
                     System.out.print(" ");
                 }
             }
@@ -120,7 +118,7 @@ public class Patterns {
          * */
 
         for (int row = 1; row <= 5; row++) {
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print(column);
             }
             System.out.println();
@@ -139,7 +137,7 @@ public class Patterns {
          * */
 
         for (int row = 5; row >= 1; row--) {
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print(column);
             }
             System.out.println();
@@ -159,7 +157,7 @@ public class Patterns {
 
         int counter = 1;
         for (int row = 1; row <= 5; row++) {
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print(counter++ + " ");
             }
             System.out.println();
@@ -178,8 +176,8 @@ public class Patterns {
          * */
 
         for (int row = 1; row <= 5; row++) {
-            for (int column = 1;  column <= row; column++) {
-                System.out.print(((row + column + 1) % 2)  + " ");
+            for (int column = 1; column <= row; column++) {
+                System.out.print(((row + column + 1) % 2) + " ");
             }
             System.out.println();
         }
@@ -191,41 +189,35 @@ public class Patterns {
 
         // Tenth Pattern
         /*
-        * Butterfly Pattern
-        * *      *
-        * **    **
-        * ***  ***
-        * ********
-        * *******
-        * ***  ***
-        * **    **
-        * *      *
-        * */
+         * Butterfly Pattern
+         * *      *
+         * **    **
+         * ***  ***
+         * ********
+         * *******
+         * ***  ***
+         * **    **
+         * *      *
+         * */
 
         for (int row = 1; row <= 8; row++) {
-            for (int column = 1;  column <= 8; column++) {
+            for (int column = 1; column <= 8; column++) {
                 if (row <= 3) {
                     if (column <= row) {
                         System.out.print("*");
-                    }
-                    else if (column >= 8 - row +1) {
+                    } else if (column >= 8 - row + 1) {
                         System.out.print("*");
-                    }
-                    else {
+                    } else {
                         System.out.print(" ");
                     }
-                }
-                else if (row == 4 || row == 5) {
+                } else if (row == 4 || row == 5) {
                     System.out.print("*");
-                }
-                else {
-                    if (column <= 8 - row +1) {
+                } else {
+                    if (column <= 8 - row + 1) {
                         System.out.print("*");
-                    }
-                    else if (column >= row) {
+                    } else if (column >= row) {
                         System.out.print("*");
-                    }
-                    else {
+                    } else {
                         System.out.print(" ");
                     }
                 }
@@ -243,7 +235,7 @@ public class Patterns {
         // top of the pattern
         for (int row = 1; row <= n; row++) {
             // print the first half of the top pattern
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             // print spaces part of the top pattern
@@ -251,7 +243,7 @@ public class Patterns {
                 System.out.print(" ");
             }
             // print the second half of the top pattern
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -261,7 +253,7 @@ public class Patterns {
         // reverse the outer loop
         for (int row = n; row >= 1; row--) {
             // print the first half of the bottom pattern
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             // print spaces part of the bottom pattern
@@ -269,13 +261,145 @@ public class Patterns {
                 System.out.print(" ");
             }
             // print the second half of the bottom pattern
-            for (int column = 1;  column <= row; column++) {
+            for (int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
         }
 
+        System.out.println("\n----------------------\n");
+
         // Eleventh Pattern
+        /*
+         * Solid Rhombus Pattern
+         *     *****
+         *    *****
+         *   *****
+         *  *****
+         * *****
+         * */
+
+        n = 5;
+        for (int row = 1; row <= n; row++) {
+            // print spaces
+            for (int column = 1; column <= n - row; column++) {
+                System.out.print(" ");
+            }
+            // print '*'
+            for (int column = 1; column <= n; column++) {
+                System.out.print("*");
+            }
+
+            // print new line
+            System.out.println();
+        }
+
+        System.out.println("\n----------------------\n");
+
+        // Twelfth Pattern
+        /*
+        * Number Pyramid Pattern
+        *     1
+        *    2  2
+        *   3  3  3
+        *  4  4  4  4
+        * 5  5  5  5  5
+        * */
+
+        n = 5;
+        for (int row = 1; row <= n; row++) {
+           // print spaces
+           for (int column = 1; column <= n - row; column++) {
+               System.out.print(" ");
+           }
+           // print numbers
+            for (int column = 1; column <= row; column++) {
+                System.out.print(row + " ");
+            }
+
+            // print newline
+            System.out.println();
+        }
+
+        System.out.println("\n----------------------\n");
+
+        // Thirteenth Pattern
+        /*
+        * Palindromic Pattern
+        *     1
+        *    212
+        *   32123
+        *  4321234
+        * 543212345
+        * */
+
+        n = 5;
+        for (int row = 1; row <= n; row++) {
+            // print spaces
+            for (int column = 1; column <= n - row; column++) {
+                System.out.print(" ");
+            }
+            // print numbers - first half
+            for (int column = row; column >= 1; column--) {
+                System.out.print(column);
+            }
+            // print numbers - second half
+            for (int column = 2; column <= row; column++) {
+                System.out.print(column);
+            }
+
+            // print newline
+            System.out.println();
+        }
+
+        System.out.println("\n----------------------\n");
+
+        // Fourteenth Pattern
+        /*
+        * Diamond Pattern
+        *    *
+        *   ***
+        *  *****
+        * *******
+        *  *******
+        *   *****
+        *    ***
+        *     *
+        * */
+
+        n = 4;
+        // first half of the pattern
+        for (int row = 1; row <= n; row ++) {
+            // print spaces
+            for (int column = 1; column <= n - row; column++) {
+                System.out.print(" ");
+            }
+            // print '*'
+            for (int column = 1; column <= 2 * (row - 1) + 1; column++) {
+                System.out.print("*");
+            }
+
+            // print newline
+            System.out.println();
+        }
+
+        // second half of the pattern
+        for (int row = n; row >= 1; row --) {
+            // print spaces
+            for (int column = 1; column <= n - row + 1; column++) {
+                System.out.print(" ");
+            }
+            // print '*'
+            for (int column = 1; column <= 2 * (row - 1) + 1; column++) {
+                System.out.print("*");
+            }
+
+            // print newline
+            System.out.println();
+        }
+
+        System.out.println("\n----------------------\n");
+
 
     }
 }
