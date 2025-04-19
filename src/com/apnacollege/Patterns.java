@@ -190,9 +190,92 @@ public class Patterns {
         // Video - 2
 
         // Tenth Pattern
+        /*
+        * Butterfly Pattern
+        * *      *
+        * **    **
+        * ***  ***
+        * ********
+        * *******
+        * ***  ***
+        * **    **
+        * *      *
+        * */
 
+        for (int row = 1; row <= 8; row++) {
+            for (int column = 1;  column <= 8; column++) {
+                if (row <= 3) {
+                    if (column <= row) {
+                        System.out.print("*");
+                    }
+                    else if (column >= 8 - row +1) {
+                        System.out.print("*");
+                    }
+                    else {
+                        System.out.print(" ");
+                    }
+                }
+                else if (row == 4 || row == 5) {
+                    System.out.print("*");
+                }
+                else {
+                    if (column <= 8 - row +1) {
+                        System.out.print("*");
+                    }
+                    else if (column >= row) {
+                        System.out.print("*");
+                    }
+                    else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
 
+        System.out.println("\n----------------------\n");
 
+        // More optimized way to print the above pattern
+        // Just analyse the number of '*' and spaces, then you'll find below clue:
+        // you will find that '*' -> 1 -> row where n = 4
+        // and spaces -> 2*(n - row) where n = 4
+        int n = 4;
+        // top of the pattern
+        for (int row = 1; row <= n; row++) {
+            // print the first half of the top pattern
+            for (int column = 1;  column <= row; column++) {
+                System.out.print("*");
+            }
+            // print spaces part of the top pattern
+            for (int column = 1; column <= 2 * (n - row); column++) {
+                System.out.print(" ");
+            }
+            // print the second half of the top pattern
+            for (int column = 1;  column <= row; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // bottom of the pattern
+        // reverse the outer loop
+        for (int row = n; row >= 1; row--) {
+            // print the first half of the bottom pattern
+            for (int column = 1;  column <= row; column++) {
+                System.out.print("*");
+            }
+            // print spaces part of the bottom pattern
+            for (int column = 1; column <= 2 * (n - row); column++) {
+                System.out.print(" ");
+            }
+            // print the second half of the bottom pattern
+            for (int column = 1;  column <= row; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Eleventh Pattern
 
     }
 }
